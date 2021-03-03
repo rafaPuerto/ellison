@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<title>Cueva de Ellison</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#historia" class="w3-bar-item w3-button w3-padding-large">Historia</a>
+    <a href="Personajes/personajes.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Personajes</a>
+    <a href="Salas/salas.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Salas</a>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+  <div class="mySlides w3-display-container w3-center">
+    <img src="Logo/Logo.jfif" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-black w3-padding-1 w3-hide-small">  
+    </div>
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">Historia</h2>
+    <p class="w3-opacity"><i>La Cueva de Ellison</i></p>
+    <div id="historia">
+        <p class="w3-justify">En un pueblo de muy pocos habitantes, hay una cueva (Cueva de Ellison) en la que llevan sin entrar nadie miles de años. 
+            Cuenta la leyenda que en lo más profundo de esta cueva hay un tesoro que dará a la persona que lo encuentre, fama y riqueza por todo el mundo. 
+            Hay el entra el protagonista (Siul) que podrá elegir diferentes acompañantes para su aventura.
+        </p>
+</div>
+<h2 class="w3-wide">Demo</h2>
+<video width="320" height="240" controls>
+  <source src="Video/Demo.mp4" type="video/mp4">
+
+</video>
+<a href=""></a>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
